@@ -619,14 +619,14 @@
  <Reference Include="Unity.2D.Sprite.Editor">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
