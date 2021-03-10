@@ -5,16 +5,30 @@ using UnityEngine.UI;
 
 public class WeaponsQuizManager : AbstractQuizManager
 {
+    public List<QuestionAndAnswer> QnA1;
     /*public List<QuestionAndAnswer> QnA;
     public GameObject[] options;
     public int currentQuestion;
     public Text QuestionTxt;
     private int numCorrect = 0;
     public Text ScoreTxt;*/
+    public Toggle[] toggle;
+    public ToggleGroup toggleGroup;
+    public QuestionAndAnswer[] questions = new QuestionAndAnswer[4];
 
     // Start is called before the first frame update
     void Start()
     {
+        questions[0]= new QuestionAndAnswer("Choose A", new string[4] { "A", "B", "C", "D" }, 0);
+        questions[1] = new QuestionAndAnswer("Choose B", new string[4] { "A", "B", "C", "D" }, 1);
+        questions[2] = new QuestionAndAnswer("Choose C", new string[4] { "A", "B", "C", "D" }, 2);
+        questions[3] = new QuestionAndAnswer("Choose D", new string[4] { "A", "B", "C", "D" }, 3);
+        for(int i =0;i<4;i++)
+        {
+            QnA.Add(questions[i]);
+        }
+        //QnA1.Add(questions);
+        Debug.Log(QnA.Count);
         generateQuestion();
     }
 
@@ -37,6 +51,11 @@ public class WeaponsQuizManager : AbstractQuizManager
                 options[i].SetActive(false);
             }
 
+        }
+        else
+        {
+            //SetAnswers();
+            checkAns();
         }
 
     }
@@ -70,18 +89,29 @@ public class WeaponsQuizManager : AbstractQuizManager
         SetAnswers();
     }
     */
+    public void checkAns()
+    {
+        int correct = QnA[currentQuestion].CorrectAnswer;
+        for (int i = 0; i < toggle.Length; i++)
+        {
+            if (toggle[correct].isOn)
+                options[0].GetComponent<WeaponAnswer>().isCorrect = true;
+            else if(!toggle[correct].isOn)
+                options[0].GetComponent<WeaponAnswer>().isCorrect = false;
+        }
+
+    }
+    
+
     public override void SetAnswers()
     {
-        for (int i = 0; i < options.Length; i++)
+        
+        options[0].GetComponent<WeaponAnswer>().isCorrect = false;
+        for (int i = 0; i < toggle.Length; i++)
         {
-            options[i].GetComponent<WeaponAnswer>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
-
-            if (QnA[currentQuestion].CorrectAnswer == i)
-            {
-                options[i].GetComponent<WeaponAnswer>().isCorrect = true;
-            }
+            toggle[i].transform.GetChild(1).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];            
         }
+
     }
     
     /*public int getNumCorrect()
