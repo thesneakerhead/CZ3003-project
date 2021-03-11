@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 abstract public class AbstractQuizManager : MonoBehaviour
 {
-    public List<QuestionAndAnswer> QnA;
+    public List<QuestionAndAnswer> QnA = new List<QuestionAndAnswer>();
     public GameObject[] options;
     public int currentQuestion;
     public Text QuestionTxt;
@@ -13,6 +13,7 @@ abstract public class AbstractQuizManager : MonoBehaviour
     public Text ScoreTxt;
     public bool completed=false;
 
+    
     public void correct()
     {
         {
