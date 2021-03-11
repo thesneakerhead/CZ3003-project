@@ -257,6 +257,7 @@
     <Compile Include="Assets\Script\Question\TrashQuizManager.cs" />
     <Compile Include="Assets\Script\Question\WeaponAnswer.cs" />
     <Compile Include="Assets\Script\Question\WeaponsQuizManager.cs" />
+    <Compile Include="Assets\Script\lobbyController.cs" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoRockPaperScissors\Assets\OpenSans\Apache License.txt" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />

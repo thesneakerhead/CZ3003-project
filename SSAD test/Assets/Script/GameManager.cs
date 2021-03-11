@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         pingText.text = "Ping:" + PhotonNetwork.GetPing();
-
+        
     }
+
     public void spawnPlayer()
     {
         float random = Random.Range(-1f, 1f);
