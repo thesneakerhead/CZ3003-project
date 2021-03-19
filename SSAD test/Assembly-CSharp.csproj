@@ -249,7 +249,6 @@
     <Compile Include="Assets\Script\MultiplayerMenu.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\PlayerMovement.cs" />
-    <Compile Include="Assets\Script\PlayerScores.cs" />
     <Compile Include="Assets\Script\Question\AbstractAnswer.cs" />
     <Compile Include="Assets\Script\Question\AbstractQuestionSign.cs" />
     <Compile Include="Assets\Script\Question\AbstractQuizManager.cs" />
@@ -260,7 +259,6 @@
     <Compile Include="Assets\Script\Question\TrashQuizManager.cs" />
     <Compile Include="Assets\Script\Question\WeaponAnswer.cs" />
     <Compile Include="Assets\Script\Question\WeaponsQuizManager.cs" />
-    <Compile Include="Assets\Script\QuestionAndAnswer.cs" />
     <Compile Include="Assets\Script\QuestionNumber.cs" />
     <Compile Include="Assets\Script\SceneChange.cs" />
     <Compile Include="Assets\Script\lobbyController.cs" />
