@@ -12,19 +12,24 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        gameCanvas.SetActive(true);
+        //gameCanvas.SetActive(true);
+        //spawnPlayer();
     }
-
+    private void Start()
+    {
+        Debug.Log("GameManager start");
+        spawnPlayer();
+    }
     public void Update()
     {
         pingText.text = "Ping:" + PhotonNetwork.GetPing();
         
     }
-
     public void spawnPlayer()
     {
+        Debug.Log("Spawn Player");
         float random = Random.Range(-1f, 1f);
-        PhotonNetwork.Instantiate(player.name, new Vector2(this.transform.position.x * random, this.transform.position.y * random), Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(player.name, new Vector2(0,0), Quaternion.identity, 0);
         gameCanvas.SetActive(false);
         sceneCamera.SetActive(true);
     }

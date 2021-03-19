@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - PunSceneSettings
     Assembly-CSharp.dll:
     - AudioRpc
+    - CameraMovement
     - ClickAndDrag
     - ClickDetector
     - ColorPerPlayerApply
@@ -11,6 +12,7 @@ ScriptsOnlyBuild:
     - ExitGames.Demos.DemoAnimator.PlayerAnimatorManager
     - ExitGames.Demos.DemoAnimator.PlayerManager
     - ExitGames.Demos.DemoAnimator.PlayerUI
+    - GameManager
     - HighlightOwnedGameObj
     - IdleRunJump
     - JumpAndRunMovement
@@ -41,14 +43,9 @@ ScriptsOnlyBuild:
     - lobbyController
     - myThirdPersonController
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
-    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
-    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
-    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -56,8 +53,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -103,11 +102,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12054}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 12088}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 13200}
     - Class: 114
-      Script: {instanceID: 41688}
+      Script: {instanceID: 13678}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -214,57 +213,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12054}
     - Class: 114
-      Script: {instanceID: 12106}
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12272}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12440}
     - Class: 114
-      Script: {instanceID: 12480}
+      Script: {instanceID: 12482}
     - Class: 114
-      Script: {instanceID: 12488}
+      Script: {instanceID: 12490}
     - Class: 114
-      Script: {instanceID: 12624}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13032}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13042}
+      Script: {instanceID: 13044}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 13144}
     - Class: 114
-      Script: {instanceID: 13188}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 13200}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 13218}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13426}
+      Script: {instanceID: 13428}
     - Class: 114
-      Script: {instanceID: 13446}
+      Script: {instanceID: 13448}
     - Class: 114
-      Script: {instanceID: 13504}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13520}
+      Script: {instanceID: 13522}
     - Class: 114
-      Script: {instanceID: 13592}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 13726}
+      Script: {instanceID: 13730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -288,6 +287,89 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/map1.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 658}
+    - Class: 114
+      Script: {instanceID: 11212}
+    - Class: 114
+      Script: {instanceID: 11216}
+    - Class: 114
+      Script: {instanceID: 11240}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 114
+      Script: {instanceID: 11522}
+    - Class: 114
+      Script: {instanceID: 11672}
+    - Class: 114
+      Script: {instanceID: 12050}
+    - Class: 114
+      Script: {instanceID: 12054}
+    - Class: 114
+      Script: {instanceID: 12440}
+    - Class: 114
+      Script: {instanceID: 13200}
+    - Class: 114
+      Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13678}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -734,6 +816,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 57d665020413417b3e5490e84fb56821
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: lobbyController
   - hash:
       serializedVersion: 2
       Hash: e7952a9998a142c61178451a16818d0a
@@ -1336,6 +1424,12 @@ ScriptsOnlyBuild:
     className: OnDoubleclickDestroy
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneChange
+  - hash:
+      serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1466,15 +1560,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 55468db752bb93732c323fde22138898
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: lobbyController
   platform: 5
   scenePathNames:
   - Assets/Scenes/Multiplayer.unity
   - Assets/Scenes/Lobby.unity
+  - Assets/Scenes/map1.unity
   playerPath: C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis & Design/Project/CZ3003-project/SSAD
     test/builds/SSAD test.exe
