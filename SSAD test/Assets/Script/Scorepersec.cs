@@ -9,6 +9,7 @@ public class Scorepersec : MonoBehaviour
     public float scoreAmount;
     public float pointIncreased;
     private float timer;
+    private static bool isWaiting; // reference to variable in Enemy script
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,16 @@ public class Scorepersec : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isWaiting = Enemy.isWaiting;
         timer += Time.deltaTime;
         scoreText.text = $"EnemyScore: {(int)scoreAmount}";
         if (timer > 5f)
         {
-            scoreAmount += pointIncreased;
-            scoreText.text = scoreText.ToString();
+            if (isWaiting == true) // only increment if enemy is waiting at quiz
+            {
+                scoreAmount += pointIncreased;
+                scoreText.text = scoreText.ToString();
+            }
             timer = 0;
         }
        

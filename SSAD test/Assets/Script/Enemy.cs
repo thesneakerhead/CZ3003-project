@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     Path path;
     int currentWayPoint = 0;
     public bool reachedEndOfPath = false;
-    public bool isWaiting = false;
+    public static bool isWaiting = false;
 
     Seeker seeker;
     Rigidbody2D rb;
