@@ -247,6 +247,8 @@
     <Compile Include="Assets\Script\Question\AbstractAnswer.cs" />
     <Compile Include="Assets\Script\Question\AbstractQuestionSign.cs" />
     <Compile Include="Assets\Script\Question\AbstractQuizManager.cs" />
+    <Compile Include="Assets\Script\Question\DBQT.cs" />
+    <Compile Include="Assets\Script\Question\LoadQuestions.cs" />
     <Compile Include="Assets\Script\Question\PendingQuestions.cs" />
     <Compile Include="Assets\Script\Question\QuestionAndAnswer.cs" />
     <Compile Include="Assets\Script\Question\QuestionSign.cs" />

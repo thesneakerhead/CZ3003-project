@@ -25,12 +25,20 @@ public class Scorepersec : MonoBehaviour
         isWaiting = Enemy.isWaiting;
         timer += Time.deltaTime;
         scoreText.text = $"EnemyScore: {(int)scoreAmount}";
-        if (timer > 5f)
+        if (timer > 8f)
         {
             if (isWaiting == true) // only increment if enemy is waiting at quiz
             {
-                scoreAmount += pointIncreased;
-                scoreText.text = scoreText.ToString();
+                if (scoreAmount == 15)
+                {
+                    scoreAmount = 15;
+                }
+
+                else
+                {
+                    scoreAmount += pointIncreased;
+                    scoreText.text = scoreText.ToString();
+                }
             }
             timer = 0;
         }

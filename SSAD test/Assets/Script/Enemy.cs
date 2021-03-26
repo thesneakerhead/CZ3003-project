@@ -25,6 +25,10 @@ public class Enemy : MonoBehaviour
     public Transform EnemyGFX;
     public Animator anim;
 
+    private bool hit = false; // variable for JohnCena
+    private bool slomo = false; // variable for Chubs
+    private float tempspeed; // variable for Chubs
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +104,9 @@ public class Enemy : MonoBehaviour
         }
 
         changeAnim(force);
+
+        HitIsTrue(); // for JohnCena
+        SloMoIsTrue(); // for Chubs
     }
 
     private void SetAnimFloat(Vector3 setVector)
@@ -132,5 +139,55 @@ public class Enemy : MonoBehaviour
                 SetAnimFloat(Vector3.down);
             }
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("JohnCena"))
+        {
+            hit = true;
+        }
+
+        if (other.gameObject.CompareTag("Chubs"))
+        {
+            slomo = true;
+        }
+    }
+
+    void HitIsTrue()
+    {
+        if (hit==true)
+        {
+            WaitForStunToEnd();
+            hit = false;
+        }
+    }
+
+    void SloMoIsTrue()
+    {
+        if (slomo == true)
+        {
+            tempspeed = speed;
+            speed /= (float)1.5;
+            WaitForSloMoToEnd();
+            speed = tempspeed;
+            slomo = false;
+        }
+    }
+
+    IEnumerator WaitForStunToEnd()
+    {
+        //wait a frame
+        yield return null;
+        //wait 10 seconds
+        yield return new WaitForSeconds(10.0f);
+    }
+
+    IEnumerator WaitForSloMoToEnd()
+    {
+        //wait a frame
+        yield return null;
+        //wait 10 seconds
+        yield return new WaitForSeconds(30.0f);
     }
 }

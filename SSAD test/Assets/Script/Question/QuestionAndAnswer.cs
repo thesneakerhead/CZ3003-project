@@ -6,9 +6,9 @@ public class QuestionAndAnswer
 {
     public string Questions;
     public string[] Answers;
-    public int CorrectAnswer;
+    public string CorrectAnswer;
 
-    public QuestionAndAnswer(string question, string[] answers, int correctAns)
+    public QuestionAndAnswer(string question, string[] answers, string correctAns)
     {
         Questions = question;
         Answers = answers;
