@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerScorescript : MonoBehaviour
 
 {
-    public static int scoreValue = 0;
+    public int scoreValue = 0;
     Text pscore;
 
     public AbstractQuizManager MCQ1;

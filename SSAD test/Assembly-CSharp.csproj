@@ -259,6 +259,7 @@
     <Compile Include="Assets\Script\QuestionNumber.cs" />
     <Compile Include="Assets\Script\SceneChange.cs" />
     <Compile Include="Assets\Script\Scorepersec.cs" />
+    <Compile Include="Assets\Script\Timergameover.cs" />
     <Compile Include="Assets\Script\lobbyController.cs" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoRockPaperScissors\Assets\OpenSans\Apache License.txt" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
