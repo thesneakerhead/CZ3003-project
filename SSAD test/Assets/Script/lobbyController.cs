@@ -22,6 +22,7 @@ public class lobbyController : MonoBehaviour
         playerProperties.Add("PlayerReady", readyState);
         PhotonNetwork.player.SetCustomProperties(playerProperties);
         Debug.Log((bool)PhotonNetwork.player.CustomProperties["PlayerReady"]);
+
     }
 
     // Update is called once per frame
@@ -50,12 +51,15 @@ public class lobbyController : MonoBehaviour
         
     }
 
-    public void startGame()
+    public void characterSelection()
+
     {
         if (PhotonNetwork.isMasterClient)
         {
             Debug.Log("load level");
-            PhotonNetwork.LoadLevel("map1"); 
+
+            PhotonNetwork.LoadLevel("ChooseCharacters"); 
+
         }
     }
     private bool allPlayersReady()

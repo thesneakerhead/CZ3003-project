@@ -7,10 +7,19 @@ public class TrashQuizManager : AbstractQuizManager
 {
     public GameObject inputField;
     private string inputAns;
+    public QuestionAndAnswer[] questions = new QuestionAndAnswer[4];
 
     // Start is called before the first frame update
     void Start()
     {
+        /*questions[0] = new QuestionAndAnswer("Choose A", new string[1] { "A" }, 0);
+        questions[1] = new QuestionAndAnswer("Choose B", new string[1] { "B"}, 0);
+        questions[2] = new QuestionAndAnswer("Choose C", new string[1] { "C"}, 0);
+        questions[3] = new QuestionAndAnswer("Choose D", new string[1] { "D" }, 0);
+        for (int i = 0; i < 4; i++)
+        {
+            QnA.Add(questions[i]);
+        }*/
         generateQuestion();
     }
 
@@ -43,7 +52,7 @@ public class TrashQuizManager : AbstractQuizManager
     {
         //check answer with inputfield
         inputAns = inputField.GetComponent<InputField>().text;
-        if (inputAns.CompareTo(QnA[currentQuestion].Answers[0]) == 0)
+        if (inputAns.CompareTo(QnA[currentQuestion].CorrectAnswer) == 0)
         {
             Debug.Log(inputAns);
             Debug.Log(QnA[currentQuestion].Answers[0]);

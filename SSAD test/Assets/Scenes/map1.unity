@@ -225,9 +225,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2078668831166278110, guid: 95f9ac9c91e74554c995c2357353c00a, type: 3}
+  alexis: {fileID: 5197962803100796796, guid: 847c518bd5e62b34ca211ff25e59cc29, type: 3}
+  chubs: {fileID: 3900901061575726118, guid: b7374da80d86b9b419586c01d8387642, type: 3}
+  john: {fileID: 4267122804596965919, guid: e2655bbc3ae29724481e448879d434ff, type: 3}
   gameCanvas: {fileID: 710214873}
   sceneCamera: {fileID: 1056234278}
   pingText: {fileID: 824981966}
+  selection: alexis
 --- !u!4 &137285646
 Transform:
   m_ObjectHideFlags: 0
