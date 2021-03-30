@@ -236,7 +236,6 @@
     <Compile Include="Assets\Script\CameraMovement.cs" />
     <Compile Include="Assets\Script\CharacterSelection.cs" />
     <Compile Include="Assets\Script\Chubs.cs" />
-    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\John.cs" />
     <Compile Include="Assets\Script\Login\FirebaseAuthHandler.cs" />
     <Compile Include="Assets\Script\Login\GoogleAuthenticator.cs" />
@@ -249,8 +248,6 @@
     <Compile Include="Assets\Script\Login\User.cs" />
     <Compile Include="Assets\Script\MCQCreation.cs" />
     <Compile Include="Assets\Script\MCQData.cs" />
-    <Compile Include="Assets\Script\MultiplayerMenu.cs" />
-    <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\PlayerMovement.cs" />
     <Compile Include="Assets\Script\Question\AbstractAnswer.cs" />
     <Compile Include="Assets\Script\Question\AbstractQuestionSign.cs" />
@@ -267,7 +264,6 @@
     <Compile Include="Assets\Script\SceneChanger.cs" />
     <Compile Include="Assets\Script\SelectedCharacter.cs" />
     <Compile Include="Assets\Script\Shooting.cs" />
-    <Compile Include="Assets\Script\lobbyController.cs" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoRockPaperScissors\Assets\OpenSans\Apache License.txt" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />
