@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class QuestionSign : MonoBehaviour
 {
-    public AbstractQuizManager quizManager;
-    public GameObject Event;
+    public GameObject WeaponQuiz; //consist of quizManager and submit button for each quiz
+    public GameObject Event; //event consist of quiz texts, images and animations
     public GameObject[] options;
     public GameObject[] animObj;
     private Animator[] anim;
-    //public Text dialogText;
-    //public string dialog;
     public bool playerInRange;
     public int correct;
+    public string quizName;
+    public AbstractQuizManager quizManager;
 
     void Start()
     {
+        
         anim = new Animator[animObj.Length];
+        restartQuiz(quizManager);
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class QuestionSign : MonoBehaviour
             if (Event.activeInHierarchy) //if dialog box already active, disable dialog
             {
                 Event.SetActive(false);
+                WeaponQuiz.SetActive(false);
+                quizManager.enabled = false;
                 for (int i = 0; i < options.Length; i++)
                 {
                     options[i].SetActive(false);
@@ -36,7 +40,8 @@ public class QuestionSign : MonoBehaviour
             else                            //if dialog box is not active, enable dialog box
             {
                 Event.SetActive(true);
-
+                WeaponQuiz.SetActive(true);
+                quizManager.enabled = true;
                 for (int i = 0; i < options.Length; i++)
                 {
                     options[i].SetActive(true);
@@ -90,4 +95,5 @@ public class QuestionSign : MonoBehaviour
             quizManager.generateQuestion();
         }
     }
+
 }

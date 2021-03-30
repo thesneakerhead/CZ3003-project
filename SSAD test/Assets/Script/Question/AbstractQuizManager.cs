@@ -13,7 +13,6 @@ abstract public class AbstractQuizManager : MonoBehaviour
     public Text ScoreTxt;
     public bool completed=false;
 
-    
     public void correct()
     {
         {
@@ -38,9 +37,7 @@ abstract public class AbstractQuizManager : MonoBehaviour
     public void generateQuestion()
     {
         //currentQuestion = Random.Range(0, QnA.Count);
-        Debug.Log(currentQuestion);
         QuestionTxt.text = QnA[currentQuestion].Questions;
-
         SetAnswers();
     }
     abstract public void SetAnswers();

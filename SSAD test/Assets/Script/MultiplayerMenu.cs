@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MultiplayerMenu : MonoBehaviour
 {
-    [SerializeField] private string versionName = "0.1";
+    [SerializeField] private string versionName = "0.2";
     [SerializeField] private GameObject connectMenu;
 
     [SerializeField] private InputField createGameInput;
@@ -34,6 +34,7 @@ public class MultiplayerMenu : MonoBehaviour
     public void createGame()
     {
         PhotonNetwork.CreateRoom(createGameInput.text, new RoomOptions() { maxPlayers = 2 }, null);
+        PhotonNetwork.LoadLevel("Lobby");
     }
 
     public void joinGame()
@@ -41,10 +42,11 @@ public class MultiplayerMenu : MonoBehaviour
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.maxPlayers = 2;
         PhotonNetwork.JoinOrCreateRoom(joinGameInput.text, roomOptions, TypedLobby.Default);
+        PhotonNetwork.LoadLevel("Lobby");
     }
 
     private void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("map1");
+
     }
 }

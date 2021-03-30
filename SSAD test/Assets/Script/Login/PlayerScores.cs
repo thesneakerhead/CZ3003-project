@@ -14,13 +14,15 @@ public class PlayerScores : MonoBehaviour
     public InputField emailText;
     public InputField usernameText;
     public InputField passwordText;
+    public InputField accountSelection;
+    
 
     private System.Random random = new System.Random();
 
     User user = new User();
    
 
-    private string databaseURL = "https://fir-auth-9c8cd-default-rtdb.firebaseio.com/users";
+    private string databaseURL = "https://fir-auth-9c8cd-default-rtdb.firebaseio.com/";
     private string AuthKey = "AIzaSyCp3-tVb1biSiZ4fASGQ_gUit-IZhko5mM";
 
     public static fsSerializer serializer = new fsSerializer();
@@ -28,7 +30,8 @@ public class PlayerScores : MonoBehaviour
 
     public static int playerScore;
     public static string playerName;
-
+    public static string accountType;
+    
     private string idToken;
 
     public static string localId;
@@ -49,6 +52,7 @@ public class PlayerScores : MonoBehaviour
 
     public void OnGetScore()
     {
+       
         GetLocalId();
     }
 
@@ -59,19 +63,20 @@ public class PlayerScores : MonoBehaviour
 
     private void PostToDatabase(bool emptyScore = false)
     {
+
         User user = new User();
 
         if (emptyScore)
         {
             user.userScore = 0;
         }
-
-        RestClient.Put(databaseURL + "/" + localId + ".json?auth=" + idToken, user);
+        string test = accountSelection.text;
+        RestClient.Put(databaseURL + accountSelection.text +  "/" + localId + ".json?auth=" + idToken, user);
     }
 
     private void RetrieveFromDatabase()
     {
-        RestClient.Get<User>(databaseURL + "/" + getLocalId + ".json?auth=" + idToken).Then(response =>
+        RestClient.Get<User>(databaseURL + accountSelection.text + "/" + getLocalId + ".json?auth=" + idToken).Then(response =>
         {
             user = response;
             UpdateScore();
@@ -107,6 +112,7 @@ public class PlayerScores : MonoBehaviour
 
     private void SignInUser(string email, string password)
     {
+        
         string userData = "{\"email\":\"" + email + "\",\"password\":\"" + password + "\",\"returnSecureToken\":true}";
         RestClient.Post<SignResponse>("https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=" + AuthKey, userData).Then(
             response =>
@@ -122,7 +128,7 @@ public class PlayerScores : MonoBehaviour
 
     private void GetUsername()
     {
-        RestClient.Get<User>(databaseURL + "/" + localId + ".json?auth=" + idToken).Then(response =>
+        RestClient.Get<User>(databaseURL + accountSelection.text + "/" + localId + ".json?auth=" + idToken).Then(response =>
         {
             playerName = response.userName;
         });
@@ -130,7 +136,7 @@ public class PlayerScores : MonoBehaviour
 
     private void GetLocalId()
     {
-        RestClient.Get(databaseURL + ".json?auth=" + idToken).Then(response =>
+        RestClient.Get(databaseURL+ accountSelection.text + ".json?auth=" + idToken).Then(response =>
         {
             var username = getScoreText.text;
 
