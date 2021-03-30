@@ -1360,8 +1360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347e5476191313f4aa26bb18296b250a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  versionName: 0.1
-  connectMenu: {fileID: 417415220}
+  versionName: 0.2
+  connectMenu: {fileID: 0}
   createGameInput: {fileID: 917994024}
   joinGameInput: {fileID: 25263327}
   startButton: {fileID: 1604235210}
