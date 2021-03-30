@@ -14,22 +14,14 @@ public class WeaponsQuizManager : AbstractQuizManager
     public Text ScoreTxt;*/
     public Toggle[] toggle;
     public ToggleGroup toggleGroup;
-    public QuestionAndAnswer[] questions = new QuestionAndAnswer[4];
+    public QuestionAndAnswer[] questions = new QuestionAndAnswer[3];
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        questions[0]= new QuestionAndAnswer("Choose A", new string[4] { "A", "B", "C", "D" }, 0);
-        questions[1] = new QuestionAndAnswer("Choose B", new string[4] { "A", "B", "C", "D" }, 1);
-        questions[2] = new QuestionAndAnswer("Choose C", new string[4] { "A", "B", "C", "D" }, 2);
-        questions[3] = new QuestionAndAnswer("Choose D", new string[4] { "A", "B", "C", "D" }, 3);
-        for(int i =0;i<4;i++)
-        {
-            QnA.Add(questions[i]);
-        }
-        //QnA1.Add(questions);
-        Debug.Log(QnA.Count);
-        generateQuestion();
+          generateQuestion();
     }
 
     void Update()
@@ -91,7 +83,8 @@ public class WeaponsQuizManager : AbstractQuizManager
     */
     public void checkAns()
     {
-        int correct = QnA[currentQuestion].CorrectAnswer;
+        int correct = int.Parse(QnA[currentQuestion].CorrectAnswer);
+        //Debug.Log("correct1 = " + QnA[currentQuestion].CorrectAnswer);
         for (int i = 0; i < toggle.Length; i++)
         {
             if (toggle[correct].isOn)
@@ -114,12 +107,4 @@ public class WeaponsQuizManager : AbstractQuizManager
 
     }
     
-    /*public int getNumCorrect()
-    {
-        return numCorrect;
-    }
-    public void setNumCorrect(int num)
-    {
-        numCorrect = num;
-    }*/
 }

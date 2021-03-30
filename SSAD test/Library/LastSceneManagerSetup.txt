@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/map1.unity
+=======
+- path: Assets/Scenes/AI on map 5.unity
+>>>>>>> AI-New2
   isLoaded: 1
   isActive: 1
   isSubScene: 0

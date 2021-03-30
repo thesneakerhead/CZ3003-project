@@ -5,11 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+<<<<<<< HEAD
   - upKick
   - downKick
   - leftKick
   - rightKick
   - kick
+=======
+  - QuestionSign
+>>>>>>> AI-New2
   layers:
   - Default
   - TransparentFX
