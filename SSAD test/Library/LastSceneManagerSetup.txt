@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Multiplayer.unity
-=======
-- path: Assets/Scenes/Movement&Question Test.unity
->>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
+- path: Assets/Scenes/1st_map.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

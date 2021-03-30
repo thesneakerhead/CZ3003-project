@@ -84,6 +84,7 @@ public class Player : Photon.MonoBehaviour
         }
         if (collision.gameObject.tag == "kick")
         {
+            Debug.Log("lame");
             animator.SetBool("isKicked", true);
             canMove = false;
             StartCoroutine(stun());

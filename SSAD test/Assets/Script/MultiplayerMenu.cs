@@ -47,10 +47,6 @@ public class MultiplayerMenu : MonoBehaviour
 
     private void OnJoinedRoom()
     {
-<<<<<<< HEAD
 
-=======
->>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
-        //PhotonNetwork.LoadLevel("Lobby");
     }
 }
