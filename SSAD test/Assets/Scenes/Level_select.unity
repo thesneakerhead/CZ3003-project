@@ -281,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 5th_map
+      value: AI on map 5
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -470,7 +470,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 5th_map
+      value: AI on map 5
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -659,7 +659,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 5th_map
+      value: AI on map 5
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -932,7 +932,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 2nd_map
+      value: AI on map 2
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -1139,7 +1139,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 3rd_map
+      value: AI on map 3
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -1496,7 +1496,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 1st_map
+      value: AI on map 1
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -1777,7 +1777,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 4th_map
+      value: AI on map 4
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2086,7 +2086,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 3rd_map
+      value: AI on map 3
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2430,7 +2430,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 4th_map
+      value: AI on map 4
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2619,7 +2619,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 1st_map
+      value: AI on map 1
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2820,7 +2820,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 4th_map
+      value: AI on map 4
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -3410,7 +3410,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 3rd_map
+      value: AI on map 3
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -3611,7 +3611,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 2nd_map
+      value: AI on map 2
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -3871,7 +3871,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 2nd_map
+      value: AI on map 2
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -4072,7 +4072,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 1st_map
+      value: AI on map 1
       objectReference: {fileID: 0}
     - target: {fileID: 2060620810686062539, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}

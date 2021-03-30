@@ -242,8 +242,8 @@
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
- <Reference Include="FullSerializer - NoUnity">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Build/FullSerializer - NoUnity.dll</HintPath>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.App">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
@@ -259,6 +259,9 @@
  </Reference>
  <Reference Include="Google.MiniJson">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="FullSerializer - NoUnity">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/FullSerializer/FullSerializer - NoUnity.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
@@ -661,6 +664,18 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{075FB4E0-8EDF-AF5C-FFF4-43EE9A66318E}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{F2DE5A14-B699-8ED5-6E5D-010EDA765A29}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{CAFFE1EA-F613-C781-6912-8433FB580446}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
