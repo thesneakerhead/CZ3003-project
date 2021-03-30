@@ -317,6 +317,9 @@
     <Reference Include="FullSerializer - NoUnity">
       <HintPath>C:/Users/Jacob/Desktop/CZ3003-project/SSAD test/Assets/FullSerializer/FullSerializer - NoUnity.dll</HintPath>
     </Reference>
+    <Reference Include="FullSerializer - NoUnity">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/FullSerializer/FullSerializer - NoUnity.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Compat">
       <HintPath>C:/Users/Jacob/Desktop/CZ3003-project/SSAD test/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
     </Reference>

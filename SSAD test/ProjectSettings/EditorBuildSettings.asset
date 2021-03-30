@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: e7238f7e11fefb640b71bc44fea97751
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/ChooseCharacters.unity
     guid: 1a9354d19fd97c04e9e87fed65e08b1d
   - enabled: 1
+=======
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     path: Assets/Scenes/map1.unity
     guid: b6eb3bfc4a09bf8458727a0a538a0281
   m_configObjects: {}

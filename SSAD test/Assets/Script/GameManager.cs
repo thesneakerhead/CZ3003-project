@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         //gameCanvas.SetActive(true);
         //spawnPlayer();
+<<<<<<< HEAD
         sel = GameObject.Find("SelectedCharacter");
         SelectedCharacter s = sel.GetComponent<SelectedCharacter>();
          this.selection = s.selection;
@@ -71,5 +72,25 @@ public class GameManager : MonoBehaviour
                 //  }
 
         }
+=======
+    }
+    private void Start()
+    {
+        Debug.Log("GameManager start");
+        spawnPlayer();
+    }
+    public void Update()
+    {
+        pingText.text = "Ping:" + PhotonNetwork.GetPing();
+        
+    }
+    public void spawnPlayer()
+    {
+        Debug.Log("Spawn Player");
+        float random = Random.Range(-1f, 1f);
+        PhotonNetwork.Instantiate(player.name, new Vector2(0,0), Quaternion.identity, 0);
+        gameCanvas.SetActive(false);
+        sceneCamera.SetActive(true);
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     }
 }

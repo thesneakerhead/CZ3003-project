@@ -5,8 +5,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioRpc
     - CameraMovement
+<<<<<<< HEAD
     - CharacterSelection
     - Chubs
+=======
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - ClickAndDrag
     - ClickDetector
     - ColorPerPlayerApply
@@ -59,8 +62,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -113,8 +118,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 12088}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13428}
     - Class: 114
       Script: {instanceID: 13676}
@@ -167,6 +173,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13198}
     - Class: 114
       Script: {instanceID: 13676}
+=======
+      Script: {instanceID: 13200}
+    - Class: 114
+      Script: {instanceID: 13678}
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -281,6 +292,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12230}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12266}
     - Class: 114
       Script: {instanceID: 12340}
@@ -300,40 +312,79 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12708}
     - Class: 114
       Script: {instanceID: 12782}
+=======
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12240}
     - Class: 114
+      Script: {instanceID: 12274}
+    - Class: 114
+      Script: {instanceID: 12348}
+    - Class: 114
+      Script: {instanceID: 12440}
+    - Class: 114
+      Script: {instanceID: 12482}
+    - Class: 114
+      Script: {instanceID: 12490}
+    - Class: 114
+      Script: {instanceID: 12626}
+    - Class: 114
+      Script: {instanceID: 12714}
+    - Class: 114
+      Script: {instanceID: 12786}
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
+    - Class: 114
+      Script: {instanceID: 12828}
+    - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 12878}
     - Class: 114
       Script: {instanceID: 13032}
+=======
+      Script: {instanceID: 13034}
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 114
-      Script: {instanceID: 13042}
+      Script: {instanceID: 13044}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 13144}
     - Class: 114
-      Script: {instanceID: 13188}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 13200}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 13218}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13242}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13430}
     - Class: 114
       Script: {instanceID: 13450}
+=======
+      Script: {instanceID: 13428}
+    - Class: 114
+      Script: {instanceID: 13448}
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 114
       Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13520}
+      Script: {instanceID: 13522}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 13594}
     - Class: 114
       Script: {instanceID: 13676}
     - Class: 114
       Script: {instanceID: 13728}
+=======
+      Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13678}
+    - Class: 114
+      Script: {instanceID: 13730}
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -373,16 +424,22 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+<<<<<<< HEAD
     - Class: 58
       Script: {instanceID: 0}
+=======
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 61
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
     - Class: 66
       Script: {instanceID: 0}
+<<<<<<< HEAD
     - Class: 70
       Script: {instanceID: 0}
+=======
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -394,6 +451,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 648}
     - Class: 114
       Script: {instanceID: 11202}
@@ -425,6 +483,33 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13594}
     - Class: 114
       Script: {instanceID: 13676}
+=======
+      Script: {instanceID: 658}
+    - Class: 114
+      Script: {instanceID: 11212}
+    - Class: 114
+      Script: {instanceID: 11216}
+    - Class: 114
+      Script: {instanceID: 11240}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 114
+      Script: {instanceID: 11522}
+    - Class: 114
+      Script: {instanceID: 11672}
+    - Class: 114
+      Script: {instanceID: 12050}
+    - Class: 114
+      Script: {instanceID: 12054}
+    - Class: 114
+      Script: {instanceID: 12440}
+    - Class: 114
+      Script: {instanceID: 13200}
+    - Class: 114
+      Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13678}
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1686,6 +1771,12 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Multiplayer.unity
   - Assets/Scenes/Lobby.unity
+<<<<<<< HEAD
   - Assets/Scenes/ChooseCharacters.unity
   - Assets/Scenes/map1.unity
   playerPath: C:/Users/Jacob/Desktop/CZ3003-project/SSAD test/builds/SSAD test.exe
+=======
+  - Assets/Scenes/map1.unity
+  playerPath: C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis & Design/Project/CZ3003-project/SSAD
+    test/builds/SSAD test.exe
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c

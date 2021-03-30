@@ -51,12 +51,20 @@ public class lobbyController : MonoBehaviour
         
     }
 
+<<<<<<< HEAD
     public void characterSelection()
+=======
+    public void startGame()
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
     {
         if (PhotonNetwork.isMasterClient)
         {
             Debug.Log("load level");
+<<<<<<< HEAD
             PhotonNetwork.LoadLevel("ChooseCharacters"); 
+=======
+            PhotonNetwork.LoadLevel("map1"); 
+>>>>>>> d54b58622e650dfc88e1b9899191da8e510a036c
         }
     }
     private bool allPlayersReady()
