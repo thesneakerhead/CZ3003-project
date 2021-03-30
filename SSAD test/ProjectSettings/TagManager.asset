@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - upKick
+  - downKick
+  - leftKick
+  - rightKick
+  - kick
   layers:
   - Default
   - TransparentFX

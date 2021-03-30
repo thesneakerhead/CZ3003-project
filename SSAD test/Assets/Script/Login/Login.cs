@@ -35,7 +35,7 @@ public class Login: MonoBehaviour
                 Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
                 return;
             }
-
+                
 
 
             // Firebase user has been created.

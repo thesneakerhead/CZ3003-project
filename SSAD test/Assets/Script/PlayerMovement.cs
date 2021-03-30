@@ -49,4 +49,16 @@ public class PlayerMovement : MonoBehaviour
             );
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            if (collision.gameObject != null) { Debug.Log("lame"); }
+            Vector3 movDir = this.myRigidbody.transform.position - collision.transform.position;
+            transform.position = transform.position + movDir;
+            
+            Destroy(collision.gameObject);
+
+        }
+    }
 }

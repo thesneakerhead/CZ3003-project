@@ -225,9 +225,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2078668831166278110, guid: 95f9ac9c91e74554c995c2357353c00a, type: 3}
+  alexis: {fileID: 5197962803100796796, guid: 847c518bd5e62b34ca211ff25e59cc29, type: 3}
+  chubs: {fileID: 3900901061575726118, guid: b7374da80d86b9b419586c01d8387642, type: 3}
+  john: {fileID: 4267122804596965919, guid: e2655bbc3ae29724481e448879d434ff, type: 3}
   gameCanvas: {fileID: 710214873}
   sceneCamera: {fileID: 1056234278}
   pingText: {fileID: 824981966}
+  selection: alexis
 --- !u!4 &137285646
 Transform:
   m_ObjectHideFlags: 0
@@ -411,7 +415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &710214874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,12 +736,12 @@ PrefabInstance:
     - target: {fileID: 5895786132380155214, guid: 1e8aa0deb00200a42870b27018cb7151,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.51
+      value: -4.44
       objectReference: {fileID: 0}
     - target: {fileID: 5895786132380155214, guid: 1e8aa0deb00200a42870b27018cb7151,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.38
+      value: -3.18
       objectReference: {fileID: 0}
     - target: {fileID: 5895786132380155214, guid: 1e8aa0deb00200a42870b27018cb7151,
         type: 3}
@@ -808,6 +812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: minPosition.y
       value: -6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895786132380155313, guid: 1e8aa0deb00200a42870b27018cb7151,
+        type: 3}
+      propertyPath: orthographic size
+      value: 7.9328938
       objectReference: {fileID: 0}
     - target: {fileID: 5895786132380155314, guid: 1e8aa0deb00200a42870b27018cb7151,
         type: 3}
