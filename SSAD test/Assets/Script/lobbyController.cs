@@ -18,6 +18,7 @@ public class lobbyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         PhotonNetwork.automaticallySyncScene = true;
         playerProperties.Add("PlayerReady", readyState);
         PhotonNetwork.player.SetCustomProperties(playerProperties);

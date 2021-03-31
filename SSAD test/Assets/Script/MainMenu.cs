@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     public void multiPlayer()
     {
         isMultiplayer = true;
+        Debug.Log("mm multi = " + isMultiplayer);
         PhotonNetwork.LoadLevel("Multiplayer");
     }
     

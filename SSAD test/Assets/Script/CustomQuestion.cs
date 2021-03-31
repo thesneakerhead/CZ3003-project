@@ -39,8 +39,8 @@ public class CustomQuestion : MonoBehaviour
     private string newQuestionType = null;
     private int setType = -1;
     private int checkType = -1;
-    private int i = -1;
-    private int t = -1;
+    private int quizNo = -1;
+    private int questionNo = -1;
     
 
     MCQData questionData = new MCQData();
@@ -70,7 +70,6 @@ public class CustomQuestion : MonoBehaviour
         getAnswer.text = "";
         getQuestion.text = "";
         getOptions.text = "";
-       
 
     }
 
@@ -195,10 +194,10 @@ public class CustomQuestion : MonoBehaviour
     private void retrieveCustomInfo()
     {
         Debug.Log("tsad");
-        t = selectQuestion.value + 1;
-        i = selectQuiz.value + 1;
+        questionNo = selectQuestion.value + 1;
+        quizNo = selectQuiz.value + 1;
 
-        RestClient.Get<MCQData>(databaseURL + getLobbyName.text + "/" + "quiz_" + i.ToString() + "/" + t.ToString() + "/" + localId + ".json?auth=" + idToken).Then(response =>
+        RestClient.Get<MCQData>(databaseURL + getLobbyName.text + "/" + "quiz_" + quizNo.ToString() + "/" + questionNo.ToString() + "/" + localId + ".json?auth=" + idToken).Then(response =>
         {
             Debug.Log("hello");
             questionData = response;
