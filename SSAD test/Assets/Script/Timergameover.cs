@@ -19,6 +19,8 @@ public class Timergameover : MonoBehaviour
     public GameObject EnemyScore;
     private Scorepersec enemyScoreScript;
 
+    public GameObject gameOverUI;
+
     //public int currentTime;
     // Start is called before the first frame update
     void Start()
@@ -51,12 +53,14 @@ public class Timergameover : MonoBehaviour
             {
                 finalText.text = "Enemy Wins!";
                 countDownStartValue = 0;
+                gameOverUI.SetActive(true);
             }
 
             if (playerscore == 15)
             {
                 finalText.text = "Player Wins!";
                 countDownStartValue = 0;
+                gameOverUI.SetActive(true);
             }
 
         }
@@ -66,14 +70,17 @@ public class Timergameover : MonoBehaviour
             if (enemyscore > playerscore)
             {
                 finalText.text = "Game over! Enemy wins!";
+                gameOverUI.SetActive(true);
             }
             else if (playerscore > enemyscore)
             {
                 finalText.text = "Game over! Player wins!";
+                gameOverUI.SetActive(true);
             }
             else
             {
                 finalText.text = "Game over! It's a draw!";
+                gameOverUI.SetActive(true);
             }
 
 

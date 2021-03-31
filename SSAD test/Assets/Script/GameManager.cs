@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public GameObject alexis;
     public GameObject chubs;
     public GameObject john;
-    public GameObject gameCanvas;
     public GameObject sceneCamera;
     public Text pingText;
     public string selection;
@@ -42,9 +41,7 @@ public class GameManager : MonoBehaviour
             case "alexis":
                 Debug.Log("Spawn Player");
                 random = Random.Range(-1f, 1f);
-                PhotonNetwork.Instantiate(alexis.name, new Vector2(0, 0), Quaternion.identity, 0);
-
-                gameCanvas.SetActive(false);
+                PhotonNetwork.Instantiate(alexis.name, new Vector2(0, 0), Quaternion.identity, 0);  
                 sceneCamera.SetActive(true);
 
                 break;
@@ -53,7 +50,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Spawn Player");
                 random = Random.Range(-1f, 1f);
                 PhotonNetwork.Instantiate(chubs.name, new Vector2(0, 0), Quaternion.identity, 0);
-                gameCanvas.SetActive(false);
+
                 sceneCamera.SetActive(true);
                 //character = Instantiate(chubs) as GameObject;
                 // character.transform.position = new Vector2(0f, 0f);
@@ -62,7 +59,6 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Spawn Player");
                 random = Random.Range(-1f, 1f);
                 PhotonNetwork.Instantiate(john.name, new Vector2(0, 0), Quaternion.identity, 0);
-                gameCanvas.SetActive(false);
                 sceneCamera.SetActive(true);
                 //character = Instantiate(john) as GameObject;
                 //character.transform.position = new Vector2(0f, 0f);

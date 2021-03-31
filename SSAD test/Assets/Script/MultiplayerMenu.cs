@@ -12,7 +12,7 @@ public class MultiplayerMenu : MonoBehaviour
     [SerializeField] private InputField joinGameInput;
     [SerializeField] private GameObject startButton;
 
-    private void Awake()
+    /*private void Awake()
     {
         PhotonNetwork.ConnectUsingSettings(versionName);
     }
@@ -21,7 +21,7 @@ public class MultiplayerMenu : MonoBehaviour
     {
         PhotonNetwork.JoinLobby(TypedLobby.Default);
         Debug.Log("Connected");
-    }
+    }*/
 
     public void checkCreateName()
     {
