@@ -14,7 +14,14 @@ public class CharacterSelection : MonoBehaviour
     public GameObject[] readyText;
     public GameObject startButton;
     private bool readyState = false;
+    private bool isMultiplayer;
+    private GameObject mainMenuScript;
 
+    private void awake()
+    {
+        mainMenuScript = GameObject.Find("MainMenuScript");
+        isMultiplayer = mainMenuScript.GetComponent<MainMenu>().isMultiplayer;
+    }
     public void Start()
     {
         PhotonNetwork.automaticallySyncScene = true;
@@ -30,17 +37,20 @@ public class CharacterSelection : MonoBehaviour
         {
             startButton.SetActive(true);
         }
-        for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
+        if (isMultiplayer)
         {
-            playerText[i].SetActive(true);
-            Debug.Log(PhotonNetwork.player.ID);
-            if ((bool)PhotonNetwork.playerList[i].CustomProperties["PlayerReady"])
+            for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
             {
-                readyText[PhotonNetwork.playerList[i].ID - 1].SetActive(true);
-            }
-            else
-            {
-                readyText[PhotonNetwork.playerList[i].ID - 1].SetActive(false);
+                playerText[i].SetActive(true);
+                Debug.Log(PhotonNetwork.player.ID);
+                if ((bool)PhotonNetwork.playerList[i].CustomProperties["PlayerReady"])
+                {
+                    readyText[PhotonNetwork.playerList[i].ID - 1].SetActive(true);
+                }
+                else
+                {
+                    readyText[PhotonNetwork.playerList[i].ID - 1].SetActive(false);
+                }
             }
         }
     }
@@ -65,16 +75,33 @@ public class CharacterSelection : MonoBehaviour
     }
     public void startGame()
     {
-        if (PhotonNetwork.isMasterClient)
+        if (!isMultiplayer)
         {
-            Debug.Log("load level");
-            PhotonNetwork.LoadLevel("map1");
+            RoomOptions roomOptions = new RoomOptions();
+            roomOptions.maxPlayers = 2;
+            PhotonNetwork.JoinOrCreateRoom("single", roomOptions, TypedLobby.Default);
+            PhotonNetwork.LoadLevel("Level_select");
         }
+        else
+        {
+            if (PhotonNetwork.isMasterClient)
+            {
+                Debug.Log("load level");
+
+                PhotonNetwork.LoadLevel("Level_select");
+            }
+        }
+        
     }
     public void readyClick()
     {
-        playerProperties["PlayerReady"] = true;
-        PhotonNetwork.player.SetCustomProperties(playerProperties);
+        if (isMultiplayer)
+        {
+            playerProperties["PlayerReady"] = true;
+            PhotonNetwork.player.SetCustomProperties(playerProperties);
+        }
+        else
+            startButton.SetActive(true);
 
     }
     private bool allPlayersReady()

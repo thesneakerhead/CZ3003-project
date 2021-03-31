@@ -24,7 +24,7 @@ public class PlayerScorescript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pscore = GetComponent<Text>(); 
+        pscore = GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -92,6 +92,6 @@ public class PlayerScorescript : MonoBehaviour
             }
         }
         pscore.text = $"PlayerScore: {scoreValue}";
-        
+
     }
 }

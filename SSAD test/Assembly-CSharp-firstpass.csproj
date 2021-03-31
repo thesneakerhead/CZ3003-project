@@ -260,9 +260,6 @@
  <Reference Include="Google.MiniJson">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
  </Reference>
- <Reference Include="FullSerializer - NoUnity">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/FullSerializer/FullSerializer - NoUnity.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
