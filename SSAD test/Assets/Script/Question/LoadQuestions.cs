@@ -27,23 +27,29 @@ public class LoadQuestions : MonoBehaviour
     public QuestionAndAnswer[] QandAList = new QuestionAndAnswer[15]; // save all 15 questions for one substage
     public List <QuestionAndAnswer> MCQList = new List<QuestionAndAnswer>();
     public List<QuestionAndAnswer> SAQList = new List<QuestionAndAnswer>();
-
+    /* old database
     private string databaseURL = "https://semaindb-default-rtdb.firebaseio.com/Questions/";
     private string AuthKey = "AIzaSyBqMbMl_ZIV17atZXrssFCnJERYpoffu8s";
     private string teacherPassword = "adminSE";
     private string teacherEmail = "admin@SE.com";
+    */
+
+    private string databaseURL = "https://fir-auth-9c8cd-default-rtdb.firebaseio.com/Questions/";
+    private string AuthKey = "AIzaSyCp3-tVb1biSiZ4fASGQ_gUit-IZhko5mM";
+    private string teacherPassword = "password123";
+    private string teacherEmail = "teacher8@gmail.com";
 
     public static fsSerializer serializer = new fsSerializer();
 
     private string idToken;
     public static string localId;
-
+    /*
     private string qnNoDBURL = "https://semaindb-default-rtdb.firebaseio.com/MCQuestionNo/";
     private string qn1URL = "https://semaindb-default-rtdb.firebaseio.com/Questions/Stage_1/Substage_1/4/";
-
+    */
     DBQT questions = new DBQT();
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     private void Start()
     {
         string userData = "{\"email\":\"" + teacherEmail + "\",\"password\":\"" + teacherPassword + "\",\"returnSecureToken\":true}";
