@@ -271,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select14
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -460,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select13
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -649,7 +649,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select15
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -922,7 +922,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select4
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -1129,7 +1129,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select8
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -1486,7 +1486,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select3
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -1767,7 +1767,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select11
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2076,7 +2076,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select7
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2420,7 +2420,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select10
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2609,7 +2609,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select2
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -2810,7 +2810,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select12
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -3400,7 +3400,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select9
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -3601,7 +3601,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select6
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -3861,7 +3861,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select5
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
@@ -4062,7 +4062,7 @@ PrefabInstance:
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Select
+      value: Select1
       objectReference: {fileID: 0}
     - target: {fileID: 1481997944886387328, guid: 49bdb105b1da2374da1a24a4ea674d65,
         type: 3}

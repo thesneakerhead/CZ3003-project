@@ -245,21 +245,6 @@
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.App">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Auth">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Platform">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.TaskExtension">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
- </Reference>
- <Reference Include="Google.MiniJson">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
@@ -271,6 +256,21 @@
  </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.App">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Platform">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.MiniJson">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Auth">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.TaskExtension">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

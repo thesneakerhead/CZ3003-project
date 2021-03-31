@@ -286,24 +286,6 @@
  <Reference Include="Google.VersionHandlerImpl_v1.2.164">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.164.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.Editor">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.App">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Auth">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Platform">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.TaskExtension">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
- </Reference>
- <Reference Include="Google.MiniJson">
- <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
@@ -315,6 +297,24 @@
  </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.App">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Platform">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.MiniJson">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Editor">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Auth">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.TaskExtension">
+ <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/trist/Documents/GitHub/CZ3003-proj/CZ3003-project/SSAD test/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

@@ -8,10 +8,11 @@ public class GameOver : MonoBehaviour
     public int nextSceneLoad;
     public int subSceneLoad;
     public int level;
+    private int currentLevel;
 
     void Start()
     {
-
+        currentLevel = PlayerPrefs.GetInt("currentLevel", 1);
         subSceneLoad = SceneManager.GetActiveScene().buildIndex;
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
         level = PlayerPrefs.GetInt("levelReached", 1);
@@ -21,31 +22,62 @@ public class GameOver : MonoBehaviour
 
     public void Continue ()
     {
-        if (level == 15)
+        if (currentLevel < level)
         {
-            Debug.Log("YOU WIN GAME");
-            PlayerPrefs.DeleteAll();
-        }
-        else
-        {
-            if (level % 3 == 0)
+            if(currentLevel%3 == 0)
             {
+                currentLevel += 1;
+                PlayerPrefs.SetInt("currentLevel", currentLevel);
                 SceneManager.LoadScene(nextSceneLoad);
-                level += 1;
             }
             else
             {
-                SceneManager.LoadScene(subSceneLoad);
-                level += 1;
-            }
-            
 
-            if (level > PlayerPrefs.GetInt("levelReached"))
+                currentLevel += 1;
+                PlayerPrefs.SetInt("currentLevel", currentLevel);
+                SceneManager.LoadScene(subSceneLoad);
+            }
+        }
+        else
+        {
+            
+            if (level == 15)
             {
-                PlayerPrefs.SetInt("levelReached", level);
+                Debug.Log("YOU WIN GAME");
+                PlayerPrefs.DeleteAll();
+            }
+            else
+            {
+                if (level % 3 == 0)
+                {
+                    SceneManager.LoadScene(nextSceneLoad);
+                    level += 1;
+                    currentLevel += 1;
+                    PlayerPrefs.SetInt("currentLevel", currentLevel);
+                    Debug.Log(level);
+                }
+                else
+                {
+                    SceneManager.LoadScene(subSceneLoad);
+                    level += 1;
+                    currentLevel += 1;
+                    PlayerPrefs.SetInt("currentLevel", currentLevel);
+                    Debug.Log(level);
+                }
+
+
+                if (level > PlayerPrefs.GetInt("levelReached"))
+                {
+                    PlayerPrefs.SetInt("levelReached", level);
+                }
             }
         }
 
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(subSceneLoad);
     }
 
     public void Quit ()
