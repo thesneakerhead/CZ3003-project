@@ -9,15 +9,18 @@ public class GameManager : MonoBehaviour
     public GameObject alexis;
     public GameObject chubs;
     public GameObject john;
+    public GameObject enemy;
     public GameObject sceneCamera;
     public Text pingText;
     public string selection;
     private GameObject sel;
-    private GameObject character;
     float random;
+    private bool isMultiplayer;
+    private GameObject mainMenuScript;
     private void Awake()
     {
-
+        mainMenuScript = GameObject.Find("MainMenuScript");
+        isMultiplayer = mainMenuScript.GetComponent<MainMenu>().isMultiplayer;
         sel = GameObject.Find("SelectedCharacter");
         SelectedCharacter s = sel.GetComponent<SelectedCharacter>();
         this.selection = s.selection;
@@ -28,11 +31,18 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("GameManager start");
         spawnPlayer();
+        if (!isMultiplayer)
+            spawnEnemy();
     }
     public void Update()
     {
         pingText.text = "Ping:" + PhotonNetwork.GetPing();
 
+    }
+
+    public void spawnEnemy()
+    {
+        PhotonNetwork.Instantiate(enemy.name, new Vector2(18, 15), Quaternion.identity, 0);
     }
     public void spawnPlayer()
     {
@@ -41,7 +51,7 @@ public class GameManager : MonoBehaviour
             case "alexis":
                 Debug.Log("Spawn Player");
                 random = Random.Range(-1f, 1f);
-                PhotonNetwork.Instantiate(alexis.name, new Vector2(0, 0), Quaternion.identity, 0);  
+                PhotonNetwork.Instantiate(alexis.name, new Vector2(11, 16), Quaternion.identity, 0);  
                 sceneCamera.SetActive(true);
 
                 break;
@@ -49,7 +59,7 @@ public class GameManager : MonoBehaviour
             case "chubs":
                 Debug.Log("Spawn Player");
                 random = Random.Range(-1f, 1f);
-                PhotonNetwork.Instantiate(chubs.name, new Vector2(0, 0), Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(chubs.name, new Vector2(17, 15), Quaternion.identity, 0);
 
                 sceneCamera.SetActive(true);
                 //character = Instantiate(chubs) as GameObject;

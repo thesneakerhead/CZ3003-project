@@ -64,10 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
-    <None Include="Assets\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
+    <Compile Include="Assets\Animations\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
+    <Compile Include="Assets\Animations\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
+    <Compile Include="Assets\Animations\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
+    <None Include="Assets\Animations\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -266,9 +266,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
-    </Reference>
     <Reference Include="Google.IOSResolver_v1.2.164">
       <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.164.dll</HintPath>
     </Reference>
@@ -284,27 +281,6 @@
     <Reference Include="Google.VersionHandlerImpl_v1.2.164">
       <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.164.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Editor">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Auth">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="FullSerializer - NoUnity">
-      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/FullSerializer/FullSerializer - NoUnity.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Compat">
       <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
     </Reference>
@@ -316,6 +292,27 @@
     </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Editor">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Auth">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.TaskExtension">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Assets/Animations/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/tay_k/OneDrive/Desktop/School/Software System Analysis &amp; Design/Project/CZ3003-project/SSAD test/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

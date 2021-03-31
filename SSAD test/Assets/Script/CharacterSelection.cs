@@ -17,18 +17,28 @@ public class CharacterSelection : MonoBehaviour
     private bool isMultiplayer;
     private GameObject mainMenuScript;
 
-    private void awake()
+    private void Awake()
     {
         mainMenuScript = GameObject.Find("MainMenuScript");
         isMultiplayer = mainMenuScript.GetComponent<MainMenu>().isMultiplayer;
+        Debug.Log("is multi = " + isMultiplayer);
     }
     public void Start()
     {
+        
         PhotonNetwork.automaticallySyncScene = true;
-        playerProperties.Add("PlayerReady", readyState);
+        //playerProperties.Add("PlayerReady", readyState);
         playerProperties.Add("SelCharacter", null);
         PhotonNetwork.player.SetCustomProperties(playerProperties);
-       
+        if (isMultiplayer)
+        {
+            for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
+            {
+                playerProperties["PlayerReady"] = false;
+                PhotonNetwork.player.SetCustomProperties(playerProperties);
+            }
+        }
+
 
     }
     public void Update()
@@ -42,7 +52,7 @@ public class CharacterSelection : MonoBehaviour
             for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
             {
                 playerText[i].SetActive(true);
-                Debug.Log(PhotonNetwork.player.ID);
+                //Debug.Log("character selection "+ PhotonNetwork.player.ID);
                 if ((bool)PhotonNetwork.playerList[i].CustomProperties["PlayerReady"])
                 {
                     readyText[PhotonNetwork.playerList[i].ID - 1].SetActive(true);

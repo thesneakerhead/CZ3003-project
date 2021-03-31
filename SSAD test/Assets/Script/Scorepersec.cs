@@ -33,7 +33,6 @@ public class Scorepersec : MonoBehaviour
                 {
                     scoreAmount = 15;
                 }
-
                 else
                 {
                     scoreAmount += pointIncreased;

@@ -18,7 +18,10 @@ public class LevelSelector : MonoBehaviour
                 levelButtons[i].interactable = false;
         }
     }
-
+    public void backButton()
+    {
+        PhotonNetwork.LoadLevel("Main Menu");
+    }
     public void Select(string levelName)
     {
         SceneManager.LoadScene(levelName);
