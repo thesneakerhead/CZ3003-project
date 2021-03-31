@@ -27,40 +27,43 @@ public class John : Player
     public override void Update()
     {
         base.Update();
-        if (Input.GetMouseButtonDown(0))
+        if (photonView.isMine)
         {
-           
-            animator.SetBool("kick", true);
-            
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            animator.SetBool("kick", false);
-            
-        }
-        CurrentClipInfo = animator.GetCurrentAnimatorClipInfo(0);
-        ClipName = CurrentClipInfo[0].clip.name;
-        switch(ClipName)
-        {
-            case "kickRight":
-                rightKick.SetActive(true);
-                break;
-            case "kickLeft":
-                leftKick.SetActive(true);
-                break;
-            case "kickUp":
-                upKick.SetActive(true);
-                break;
-            case "kickDown":
-                downKick.SetActive(true);
-                break;
-            default:
-                rightKick.SetActive(false);
-                leftKick.SetActive(false);
-                upKick.SetActive(false);
-                downKick.SetActive(false);
+            if (Input.GetMouseButtonDown(0))
+            {
 
-                break;
+                animator.SetBool("kick", true);
+
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                animator.SetBool("kick", false);
+
+            }
+            CurrentClipInfo = animator.GetCurrentAnimatorClipInfo(0);
+            ClipName = CurrentClipInfo[0].clip.name;
+            switch (ClipName)
+            {
+                case "kickRight":
+                    rightKick.SetActive(true);
+                    break;
+                case "kickLeft":
+                    leftKick.SetActive(true);
+                    break;
+                case "kickUp":
+                    upKick.SetActive(true);
+                    break;
+                case "kickDown":
+                    downKick.SetActive(true);
+                    break;
+                default:
+                    rightKick.SetActive(false);
+                    leftKick.SetActive(false);
+                    upKick.SetActive(false);
+                    downKick.SetActive(false);
+
+                    break;
+            }
         }
         
 

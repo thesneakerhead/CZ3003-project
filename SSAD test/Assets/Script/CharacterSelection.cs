@@ -16,6 +16,7 @@ public class CharacterSelection : MonoBehaviour
     private bool readyState = false;
     private bool isMultiplayer;
     private GameObject mainMenuScript;
+    public GameObject displayText;
 
     private void Awake()
     {
@@ -63,6 +64,22 @@ public class CharacterSelection : MonoBehaviour
                 }
             }
         }
+        switch (sel.selection)
+        {
+            case "alexis":
+                displayText.GetComponent<UnityEngine.UI.Text>().text = "Alexis";
+
+                break;
+
+            case "chubs":
+                displayText.GetComponent<UnityEngine.UI.Text>().text = "Chubs";
+
+                break;
+            case "john":
+                displayText.GetComponent<UnityEngine.UI.Text>().text = "John Cena";
+
+                break;
+        }
     }
     public void aPress()
     {
@@ -100,6 +117,7 @@ public class CharacterSelection : MonoBehaviour
 
                 PhotonNetwork.LoadLevel("Level_select");
             }
+            
         }
         
     }
