@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageNumber: 1
-  SubstageNumber: 2
+  SubstageNumber: 1
   MCQ1: {fileID: 1942132828}
   MCQ2: {fileID: 917655729}
   MCQ3: {fileID: 1100470761}
@@ -9002,7 +9002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc6efe8dd4020340b509a07518fb6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponQuiz: {fileID: 1212058698}
+  WeaponQuiz: {fileID: 1289817444}
   Event: {fileID: 1927989088}
   options:
   - {fileID: 613607171}
@@ -9011,7 +9011,7 @@ MonoBehaviour:
   - {fileID: 2072054727}
   - {fileID: 923343038}
   - {fileID: 1522381351}
-  playerInRange: 1
+  playerInRange: 0
   correct: 0
   quizName: 
   quizManager: {fileID: 917655729}
