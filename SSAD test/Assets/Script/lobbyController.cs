@@ -13,6 +13,7 @@ public class lobbyController : MonoBehaviour
     private Hashtable playerProperties = new Hashtable();
     public GameObject[] playerText;
     public GameObject[] ReadyText;
+    public Text roomNameText;
 
 
     // Start is called before the first frame update
@@ -23,7 +24,14 @@ public class lobbyController : MonoBehaviour
         playerProperties.Add("PlayerReady", readyState);
         PhotonNetwork.player.SetCustomProperties(playerProperties);
         Debug.Log((bool)PhotonNetwork.player.CustomProperties["PlayerReady"]);
-
+        StartCoroutine(LateStart(1.5f));
+        
+    }
+    IEnumerator LateStart(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        //Your Function You Want to Call
+        roomNameText.text = "Room: " + PhotonNetwork.room.Name;
     }
 
     // Update is called once per frame
@@ -36,7 +44,9 @@ public class lobbyController : MonoBehaviour
         for (int i=0;i< PhotonNetwork.playerList.Length; i++)
         {
             playerText[i].SetActive(true);
-            Debug.Log(PhotonNetwork.player.ID);
+           // Debug.Log(PhotonNetwork.inRoom);
+            //Debug.Log("list length = " + PhotonNetwork.playerList.Length);
+            //Debug.Log(PhotonNetwork.player.ID);
             if ((bool)PhotonNetwork.playerList[i].CustomProperties["PlayerReady"])
             {
                 ReadyText[PhotonNetwork.playerList[i].ID - 1].SetActive(true);
@@ -51,7 +61,6 @@ public class lobbyController : MonoBehaviour
         PhotonNetwork.player.SetCustomProperties(playerProperties);
         
     }
-
     public void characterSelection()
 
     {

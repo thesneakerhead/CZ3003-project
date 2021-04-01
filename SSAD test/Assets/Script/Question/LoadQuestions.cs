@@ -48,8 +48,14 @@ public class LoadQuestions : MonoBehaviour
     private string qn1URL = "https://semaindb-default-rtdb.firebaseio.com/Questions/Stage_1/Substage_1/4/";
     */
     DBQT questions = new DBQT();
-
+    private bool isCustom;
+    private GameObject mainMenuScript;
     // Start is called before the first frame update 
+    private void Awake()
+    {
+        mainMenuScript = GameObject.Find("MainMenuScript");
+        isCustom = mainMenuScript.GetComponent<MainMenu>().isCustom;
+    }
     private void Start()
     {
         string userData = "{\"email\":\"" + teacherEmail + "\",\"password\":\"" + teacherPassword + "\",\"returnSecureToken\":true}";
@@ -88,14 +94,47 @@ public class LoadQuestions : MonoBehaviour
         }
         });
     }
+
+    public void getCustomQuestions(int i, int j)
+    {
+        string customdatabaseURL = "https://fir-auth-9c8cd-default-rtdb.firebaseio.com/CustomLobbyQuestions/";
+        RestClient.Get<DBQT>(customdatabaseURL + PhotonNetwork.room.Name + "/" + "quiz_" + i.ToString() + "/" + j.ToString() + "/" + localId + ".json?auth=" + idToken).Then(response =>
+        {
+            questions = response;
+            
+            QandAList[i - 1] = new QuestionAndAnswer(questions.Question, questions.Options.Split(';'), questions.Answer);
+            Debug.Log(QandAList[i - 1].Questions + " options length =" + QandAList[i - 1].Answers.Length);
+            if (QandAList[i - 1].Answers.Length == 1) //change this when QuestionAndAnswer type changes
+            {
+                SAQList.Add(QandAList[i - 1]);
+                Debug.Log("Added SAQ" + QandAList[i - 1].Questions);
+            }
+            else
+            {
+                MCQList.Add(QandAList[i - 1]);
+                Debug.Log("Added MCQ" + QandAList[i - 1].Questions);
+            }
+
+    });
+    }
     public void OnSubmit()
     {
         Debug.Log("button");
         //load all questions from DB
-        for (int i = 1; i < 16; i++)
+        if(isCustom)
         {
-            GetQuestionsFromDB(i);
+            for (int i = 1; i < 6; i++)
+                for (int j = 1; j < 4; j++)
+                    getCustomQuestions(i, j);
         }
+        else
+        {
+            for (int i = 1; i < 16; i++)
+            {
+                GetQuestionsFromDB(i);
+            }
+        }
+        
     }
 
     public void assignQuestion()

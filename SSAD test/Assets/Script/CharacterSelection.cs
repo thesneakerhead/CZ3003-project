@@ -16,11 +16,21 @@ public class CharacterSelection : MonoBehaviour
     private bool readyState = false;
     private bool isMultiplayer;
     private GameObject mainMenuScript;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    private bool isCustom;
+=======
+    public GameObject displayText;
+>>>>>>> 3e96f37ad286b0137bfc814f49d7e8979f348dc1
+=======
+    public GameObject displayText;
+>>>>>>> 3e96f37ad286b0137bfc814f49d7e8979f348dc1
 
     private void Awake()
     {
         mainMenuScript = GameObject.Find("MainMenuScript");
         isMultiplayer = mainMenuScript.GetComponent<MainMenu>().isMultiplayer;
+        isCustom = mainMenuScript.GetComponent<MainMenu>().isCustom;
         Debug.Log("is multi = " + isMultiplayer);
     }
     public void Start()
@@ -30,7 +40,7 @@ public class CharacterSelection : MonoBehaviour
         //playerProperties.Add("PlayerReady", readyState);
         playerProperties.Add("SelCharacter", null);
         PhotonNetwork.player.SetCustomProperties(playerProperties);
-        if (isMultiplayer)
+        if (isMultiplayer||isCustom)
         {
             for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
             {
@@ -43,12 +53,13 @@ public class CharacterSelection : MonoBehaviour
     }
     public void Update()
     {
-        if (allPlayersReady() && PhotonNetwork.isMasterClient)
+
+        if (isMultiplayer||isCustom)
         {
-            startButton.SetActive(true);
-        }
-        if (isMultiplayer)
-        {
+            if (allPlayersReady() && PhotonNetwork.isMasterClient)
+            {
+                startButton.SetActive(true);
+            }
             for (int i = 0; i < PhotonNetwork.playerList.Length; i++)
             {
                 playerText[i].SetActive(true);
@@ -63,6 +74,33 @@ public class CharacterSelection : MonoBehaviour
                 }
             }
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+        else
+            startButton.SetActive(true);
+=======
+=======
+>>>>>>> 3e96f37ad286b0137bfc814f49d7e8979f348dc1
+        switch (sel.selection)
+        {
+            case "alexis":
+                displayText.GetComponent<UnityEngine.UI.Text>().text = "Alexis";
+
+                break;
+
+            case "chubs":
+                displayText.GetComponent<UnityEngine.UI.Text>().text = "Chubs";
+
+                break;
+            case "john":
+                displayText.GetComponent<UnityEngine.UI.Text>().text = "John Cena";
+
+                break;
+        }
+<<<<<<< HEAD
+>>>>>>> 3e96f37ad286b0137bfc814f49d7e8979f348dc1
+=======
+>>>>>>> 3e96f37ad286b0137bfc814f49d7e8979f348dc1
     }
     public void aPress()
     {
@@ -85,7 +123,7 @@ public class CharacterSelection : MonoBehaviour
     }
     public void startGame()
     {
-        if (!isMultiplayer)
+        if (!isMultiplayer&&!isCustom)
         {
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.maxPlayers = 2;
@@ -100,12 +138,13 @@ public class CharacterSelection : MonoBehaviour
 
                 PhotonNetwork.LoadLevel("Level_select");
             }
+            
         }
         
     }
     public void readyClick()
     {
-        if (isMultiplayer)
+        if (isMultiplayer||isCustom)
         {
             playerProperties["PlayerReady"] = true;
             PhotonNetwork.player.SetCustomProperties(playerProperties);

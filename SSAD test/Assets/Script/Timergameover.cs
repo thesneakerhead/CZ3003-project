@@ -30,6 +30,8 @@ public class Timergameover : MonoBehaviour
         enemyScoreScript = EnemyScore.GetComponent<Scorepersec>();
         // Find the PlayerScorescript attached to "PlayerScore"
         playerScoreScript = PlayerScore.GetComponent<PlayerScorescript>();
+
+ 
     }
     
     void Update()
@@ -51,14 +53,14 @@ public class Timergameover : MonoBehaviour
 
             if (enemyscore == 15)
             {
-                finalText.text = "Enemy Wins!";
+                finalText.text = "You lost! Enemy Wins! Select RETRY";
                 countDownStartValue = 0;
                 gameOverUI.SetActive(true);
             }
 
             if (playerscore == 15)
             {
-                finalText.text = "Player Wins!";
+                finalText.text = "Player Wins! Select CONTINUE";
                 countDownStartValue = 0;
                 gameOverUI.SetActive(true);
             }
@@ -69,17 +71,17 @@ public class Timergameover : MonoBehaviour
             
             if (enemyscore > playerscore)
             {
-                finalText.text = "Game over! Enemy wins!";
+                finalText.text = "You lost! Enemy Wins! Select RETRY";
                 gameOverUI.SetActive(true);
             }
             else if (playerscore > enemyscore)
             {
-                finalText.text = "Game over! Player wins!";
+                finalText.text = "Player Wins! Select CONTINUE";
                 gameOverUI.SetActive(true);
             }
             else
             {
-                finalText.text = "Game over! It's a draw!";
+                finalText.text = "It's a draw! Select CONTINUE";
                 gameOverUI.SetActive(true);
             }
 

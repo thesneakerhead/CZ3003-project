@@ -31,6 +31,7 @@ public class CustomQuestion : MonoBehaviour
     public Text warningDisplay;
     public Dropdown selectQuestion;
     public Dropdown selectQuiz;
+    public GameObject continueButton;
 
     public int quizCounters = 1;
     public int questionCounters = 1;
@@ -41,12 +42,24 @@ public class CustomQuestion : MonoBehaviour
     private int checkType = -1;
     private int quizNo = -1;
     private int questionNo = -1;
-    
+    int quizCounterHolder = -1;
+    int questionCounterHolder = -1;
+    bool allQuestionsCreated=false;
+
 
     MCQData questionData = new MCQData();
-    private void Start()
+    private void Awake()
     {
-        
+        PhotonNetwork.ConnectUsingSettings("0.2");
+    }
+
+    private void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby(TypedLobby.Default);
+        Debug.Log("Connected");
+    }
+    private void Start()
+    { 
         string userData = "{\"email\":\"" + userEmail + "\",\"password\":\"" + userPassword + "\",\"returnSecureToken\":true}";
         RestClient.Post<SignResponse>("https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=" + AuthKey, userData).Then(
             response =>
@@ -57,12 +70,20 @@ public class CustomQuestion : MonoBehaviour
             {
                 Debug.Log(error);
             });
-        Debug.Log("test2");
-        
-        
-
+        Debug.Log("test2"); 
     }
-
+    private void Update()
+    {
+        if (quizCounters == 1 && questionCounters == 2)
+            allQuestionsCreated = true;
+        if (allQuestionsCreated)
+            continueButton.SetActive(true);
+    }
+    public void nextScene()
+    {
+        PhotonNetwork.JoinOrCreateRoom(getLobbyName.text, new RoomOptions() { maxPlayers = 2 }, null);
+        PhotonNetwork.LoadLevel("Lobby");
+    }
     public void OnSubmit()
     {
         PostToDatabase();
@@ -75,11 +96,8 @@ public class CustomQuestion : MonoBehaviour
 
     public void submitQuestionChange()
     {
-        
         retrieveCustomInfo();
     }
-
-
 
     private void PostToDatabase()
     {
@@ -92,8 +110,7 @@ public class CustomQuestion : MonoBehaviour
         mcqData.Options = getOptions.text;
 
         Debug.Log(quizCounters + " " + questionCounters);
-        int quizCounterHolder = -1;
-        int questionCounterHolder = -1;
+        
 
         questionCounterHolder = questionCounters + 1;
         quizCounterHolder = quizCounters;
@@ -138,12 +155,6 @@ public class CustomQuestion : MonoBehaviour
             questionCounters = 1;
             
         }
-
-       
-
-
-
-
     }
 
     private void questionTypeChecker()
@@ -209,18 +220,11 @@ public class CustomQuestion : MonoBehaviour
     }    
     private void reInsertQuestion()
     {
-
-        
-        
         int quizSelect = selectQuiz.value + 1;
         int questionSelect = selectQuestion.value + 1;
 
-       
-
         quizCounters = quizSelect;
         questionCounters = questionSelect;
-
-        
 
         Debug.Log(questionData.Options);
         getQuestion.text = questionData.Question;

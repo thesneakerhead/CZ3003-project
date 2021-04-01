@@ -30,6 +30,7 @@ public class PlayerScorescript : MonoBehaviour
     private int SAQ2Score = 0;
 
     private bool isMultiplayer;
+    private bool isCustom;
     private GameObject mainMenuScript;
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class PlayerScorescript : MonoBehaviour
 
         //get is multiplayer bool
         mainMenuScript = GameObject.Find("MainMenuScript");
+        isCustom = mainMenuScript.GetComponent<MainMenu>().isCustom;
         isMultiplayer = mainMenuScript.GetComponent<MainMenu>().isMultiplayer;
 
         playerProperties.Add("PlayerScore", scoreValue);
@@ -49,7 +51,7 @@ public class PlayerScorescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isMultiplayer)
+        if(!isMultiplayer&&!isCustom)
             enemyScore();
 
         updatePlayerScore();      
@@ -149,7 +151,7 @@ public class PlayerScorescript : MonoBehaviour
     }
     public void displayScore()
     {
-        if(isMultiplayer)//take score from here
+        if(isMultiplayer||isCustom)//take score from here
         {
             player1ScoreText.text = $"Player1 Score: {PhotonPlayer.Find(1).CustomProperties["PlayerScore"]}";
             player2ScoreText.text = $"Player2 Score: {PhotonPlayer.Find(2).CustomProperties["PlayerScore"]}";

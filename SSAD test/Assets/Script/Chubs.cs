@@ -45,7 +45,7 @@ public class Chubs : Player
         moveAim(direction, rotationZ);
         direction.Normalize();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&photonView.isMine)
         {
 
             fireBullet(direction, rotationZ - 90f);

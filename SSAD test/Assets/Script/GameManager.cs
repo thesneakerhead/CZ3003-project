@@ -16,11 +16,13 @@ public class GameManager : MonoBehaviour
     private GameObject sel;
     float random;
     private bool isMultiplayer;
+    private bool isCustom;
     private GameObject mainMenuScript;
     private void Awake()
     {
         mainMenuScript = GameObject.Find("MainMenuScript");
         isMultiplayer = mainMenuScript.GetComponent<MainMenu>().isMultiplayer;
+        isCustom = mainMenuScript.GetComponent<MainMenu>().isCustom;
         sel = GameObject.Find("SelectedCharacter");
         SelectedCharacter s = sel.GetComponent<SelectedCharacter>();
         this.selection = s.selection;
@@ -31,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("GameManager start");
         spawnPlayer();
-        if (!isMultiplayer)
+        if (!isMultiplayer&&!isCustom)
             spawnEnemy();
     }
     public void Update()
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
             case "alexis":
                 Debug.Log("Spawn Player");
                 random = Random.Range(-1f, 1f);
-                PhotonNetwork.Instantiate(alexis.name, new Vector2(11, 16), Quaternion.identity, 0);  
+                PhotonNetwork.Instantiate(alexis.name, new Vector2(17, 16), Quaternion.identity, 0);  
                 sceneCamera.SetActive(true);
 
                 break;
